@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 36 20% 96%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 30 10% 15%;
+
+    --secondary: 30 15% 25%;
+    --secondary-foreground: 36 20% 96%;
+
+    --muted: 36 20% 90%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 27 87% 67%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 20% 85%;
+    --input: 36 20% 85%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 58%), hsl(38 92% 50%));
+    --gradient-bronze: linear-gradient(135deg, hsl(27 87% 67%), hsl(30 82% 55%));
+    --shadow-coin: 0 8px 24px -8px hsl(38 92% 50% / 0.3);
+    --shadow-elevated: 0 12px 36px -12px hsl(30 10% 15% / 0.15);
+  }
+
+  .dark {
+    --background: 30 10% 10%;
+    --foreground: 36 20% 96%;
+
+    --card: 30 10% 14%;
+    --card-foreground: 36 20% 96%;
+
+    --popover: 30 10% 14%;
+    --popover-foreground: 36 20% 96%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 30 10% 15%;
+
+    --secondary: 30 15% 20%;
+    --secondary-foreground: 36 20% 96%;
+
+    --muted: 30 10% 20%;
+    --muted-foreground: 36 20% 65%;
+
+    --accent: 27 87% 67%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 3D Flip Animation Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
